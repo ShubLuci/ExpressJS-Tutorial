@@ -1,0 +1,28 @@
+{
+  "name": "expressjs-tutorial",
+  "version": "1.0.0",
+  "description": "Express JS Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "Javascript",
+    "NodeJS",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/ExpressJS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/ExpressJS-Tutorial#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
