@@ -1,0 +1,28 @@
+{
+  "name": "02_http_methods",
+  "version": "1.0.0",
+  "description": "Basic Understanding of HTTP Methods and their implementation in Node via ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "Javascript",
+    "NodeJS",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/ExpressJS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/ExpressJS-Tutorial#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
