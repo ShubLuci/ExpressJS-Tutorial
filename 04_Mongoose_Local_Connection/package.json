@@ -1,0 +1,30 @@
+{
+  "name": "04_mongoose_local_connection",
+  "version": "1.0.0",
+  "description": "Mongoose Local MongoDB Connection",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Javascript",
+    "NodeJS",
+    "Mongoose"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/ExpressJS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/ExpressJS-Tutorial#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.7.3",
+    "nodemon": "^3.1.7"
+  }
+}
