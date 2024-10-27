@@ -10,7 +10,7 @@ let port = 3000;
     let mongo = await dbConnection();
     try {
         app.listen(port, () => {
-            console.log("src/app.js > Server Listening at Port")
+            console.log("src/app.js > Server Listening at Port "+port)
         })
     } catch (err) {
         const error = {

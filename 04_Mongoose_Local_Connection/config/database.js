@@ -4,7 +4,7 @@ async function dbConnection() {
     const connectionString = 'mongodb://127.0.0.1:27017/mongosh?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.2'
     try{
         const response = await mongoose.connect(connectionString);
-        console.log("database.js > MongoDB Connection Established");
+        console.log("config/database.js > MongoDB Connection Established");
         return response;
     } catch(err) {
         const error = {
