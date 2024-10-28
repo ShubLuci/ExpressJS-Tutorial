@@ -1,0 +1,30 @@
+{
+  "name": "05_mongodb_curd_operations",
+  "version": "1.0.0",
+  "description": "MongoDB CURD Operations via Mongoose and Express",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "Javascript",
+    "NodeJS",
+    "MongoDB",
+    "Express",
+    "Mongoose"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/ExpressJS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/ExpressJS-Tutorial#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.7.3"
+  }
+}
