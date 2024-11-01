@@ -1,4 +1,5 @@
 const express = require('express')
+const {validateUser} = require('../middleware/validate.js')
 
 const app = express()
 
@@ -9,7 +10,7 @@ app.listen(port, () => {
 })
 
 // Handling multiple routes
-app.use("/userLogin",
+app.use("/userLogin", validateUser,
     (req,res,next) => {
         console.log("Genearte JWT Token, Response #1")
         next()
