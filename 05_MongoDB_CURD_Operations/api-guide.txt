@@ -1,0 +1,62 @@
+API 1: POST /registerBook
+
+Path: localhost:3000/registerBook
+Payload:
+{
+    "title": "Overlord",
+    "author": "Kugane Maruyama",
+    "volumes": 16,
+    "isbn": ["978-0-316-27224-7","978-0-316-36391-4"],
+    "studioPublished": "Yen Press",
+    "publicationDate": "2012-07-30"
+}
+
+----------------------------------------------
+API 2: GET /getBooksById
+
+Path: localhost:3000/getBooksById?id=67250abbc7a9c6d80b4c21e5
+
+----------------------------------------------
+API 3: GET /getBooksByTitle
+
+Path: localhost:3000/getBooksByTitle?title=Overlord
+
+----------------------------------------------
+API 4: PATCH /updateBookVolumeById
+
+Path: localhost:3000/updateBookVolumeById
+Payload:
+{
+    "id": "67250abbc7a9c6d80b4c21e4",
+    "volumes": 100
+}
+
+----------------------------------------------
+API 5: PATCH /updateBookVolumeByTitle
+
+Path: localhost:3000/updateBookVolumeByTitle
+Payload:
+{
+    "title": "Overlord",
+    "volumes": 250
+}
+
+----------------------------------------------
+API 6: DELETE /deleteBookById
+
+Path: localhost:3000/deleteBookById
+Payload: 
+{
+    "id": "67250abbc7a9c6d80b4c21e5"
+}
+
+----------------------------------------------
+API 7: DELETE /deleteBookByTitle
+
+Path: localhost:3000/deleteBookByTitle
+Payload:
+{
+    "title": "That Time I Got Reincarnated as a Slime"
+}
+
+----------------------------------------------
