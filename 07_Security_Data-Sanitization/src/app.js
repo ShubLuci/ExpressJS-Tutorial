@@ -2,6 +2,7 @@ const express = require('express');
 const { dbConnection } = require('../config/database.js');
 const User = require('../models/user.js')
 const bcrypt = require('bcrypt');
+const { validateSignUp } = require('../middleware/validate.js')
 
 const app = express();
 
@@ -23,20 +24,27 @@ const port = 3000;
 
 app.use(express.json())
 
-app.post('/signUp', async (req,res) => {
+app.post('/signUp', validateSignUp, async (req,res,next) => {
     try {
-        let hashedPassword = await bcrypt.hash(req.body.password,10);
-        let userDetails = new User({
-            emailId: req.body.emailId,
-            password: hashedPassword,
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            age: req.body.age,
-            gender: req.body.gender
-        });
-        let response = await userDetails.save();
-        console.log("SUCCESS > src/app.js > /signUp > User Data Inserted Successfully");
-        res.send(response);
+        const user = await User.findOne({emailId: req.body.emailId});
+        if(!user){
+            let hashedPassword = await bcrypt.hash(req.body.password,10);
+            let userDetails = new User({
+                emailId: req.body.emailId,
+                password: hashedPassword,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                age: req.body.age,
+                gender: req.body.gender
+            });
+            let response = await userDetails.save();
+            console.log("SUCCESS > src/app.js > /signUp > User Data Inserted Successfully");
+            res.send(response);
+        } else {
+            console.log("ERROR > src/app.js > /signUp > EmailId Already Exists");
+            res.status(400).send("EmailId Already Exists")
+        }
+            
     } catch (err) {
         let error = {
             statusCode: 400,
