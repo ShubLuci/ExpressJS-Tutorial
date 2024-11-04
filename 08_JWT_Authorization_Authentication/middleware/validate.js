@@ -1,5 +1,6 @@
 const validator = require("validator");
 const User = require("../models/user.js");
+const jwt = require('jsonwebtoken');
 
 function validateSignUp(req, res, next) {
     const { emailId, password, gender } = req.body;
@@ -71,7 +72,27 @@ function validateLogin(req, res, next) {
     }
 }
 
+
+function validateJWTToken(req,res,next) {
+    try{
+        const { access_token } = req.cookies;
+        const { _id } = jwt.verify(access_token,process.env.JWT_SECRET_KEY);
+        req.id = _id;
+        next();
+    } catch (err) {
+        console.log("ERROR > middleware/validate.js > validateJWTToken > Error in Middleware");
+        let error = {
+            statusCode: 400,
+            name: err.name,
+            message: err.message,
+        };
+        console.table(error);
+        res.status(400).send("ERROR > middleware/validate.js > validateJWTToken > Error in Middleware");
+    }
+}
+
 module.exports = {
     validateSignUp,
     validateLogin,
+    validateJWTToken
 };

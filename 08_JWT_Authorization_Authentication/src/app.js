@@ -2,7 +2,7 @@ const express = require("express");
 const { dbConnection } = require("../config/database.js");
 const User = require("../models/user.js");
 const bcrypt = require("bcrypt");
-const { validateSignUp, validateLogin } = require("../middleware/validate.js");
+const { validateSignUp, validateLogin, validateJWTToken } = require("../middleware/validate.js");
 const cookieParser = require("cookie-parser");
 const jwt = require('jsonwebtoken');
 
@@ -103,4 +103,28 @@ app.post("/login", validateLogin, async (req, res) => {
         console.table(error);
         res.status(400).send("ERROR > src/app.js > /login > " + err.message);
     }
+});
+
+
+
+
+app.patch('/updateUser', validateJWTToken, async (req,res,next) => {
+    try{
+        const response = await User.findByIdAndUpdate(
+            {_id:req.id},
+            {firstName: req.body.firstName, lastName: req.body.lastName},{returnDocument: "after"}
+        );
+        console.log("SUCCESS > src/app.js > /updateUser > Data Updated Successfully")
+        res.send(response)
+    } catch(err) {
+        console.log("ERROR > src/app.js > /updateUser > Data Update Failed");
+        let error = {
+            statusCode: 400,
+            name: err.name,
+            message: err.message,
+        };
+        console.table(error);
+        res.status(400).send("ERROR > src/app.js > /updateUser > UPDATE FAILED");
+    }
+    
 });
