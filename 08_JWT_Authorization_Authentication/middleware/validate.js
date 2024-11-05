@@ -87,7 +87,7 @@ function validateJWTToken(req,res,next) {
             message: err.message,
         };
         console.table(error);
-        res.status(400).send("ERROR > middleware/validate.js > validateJWTToken > Error in Middleware");
+        res.status(400).send("ERROR > middleware/validate.js > validateJWTToken > Error in Middleware > "+err.message);
     }
 }
 

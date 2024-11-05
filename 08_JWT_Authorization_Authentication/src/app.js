@@ -81,9 +81,17 @@ app.post("/login", validateLogin, async (req, res) => {
                 console.log(
                     "SUCCESS > src/app.js > /login > Data Fetched Successfully"
                 );
-                // Generate Access Token
-                const accessToken = jwt.sign({_id:user._id},process.env.JWT_SECRET_KEY);
-                res.cookie("access_token",accessToken);
+                // Generate Access Token & expire
+                const accessToken = jwt.sign(
+                    {_id:user._id},
+                    process.env.JWT_SECRET_KEY,
+                    {expiresIn: "10min"}
+                );
+                // Create a cookie and expire
+                res.cookie(
+                    "access_token",accessToken,
+                    {expires: new Date(Date.now()+ 300000)}
+                );
                 console.log("SUCCESS > src/app.js > /login > JWT Token Generated and Stored Inside Cookie Successfully");
                 res.send(user);
             } else {

@@ -21,3 +21,14 @@ Payload:
     "emailId": "mailId@gmail.com",
     "password": "Mypassword"
 }
+
+-------------------------------------
+
+API 3: PATCH /updateUser
+
+Path: localhost:3000/updateUser
+Payload:
+{
+    "firstName": "XXX",
+    "lastName": "YYY"
+}
