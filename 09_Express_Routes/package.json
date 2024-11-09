@@ -1,0 +1,32 @@
+{
+  "name": "09_express_routes",
+  "version": "1.0.0",
+  "description": "Express Routes for better API management",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "Express",
+    "Routing"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/ExpressJS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/ExpressJS-Tutorial#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
+    "validator": "^13.12.0"
+  }
+}

@@ -1,0 +1,23 @@
+API 1: POST /signUp
+
+Path: localhost:3000/signUp
+Payload:
+{
+    "emailId": "mailId@gmail.com",
+    "password": "Mypassword",
+    "firstName": "FName",
+    "lastName": "LName",
+    "age": 24,
+    "gender": "male"
+}
+
+------------------------------------
+
+API 2: POST /login
+
+Path: localhost:3000/login
+Payload:
+{
+    "emailId": "mailId@gmail.com",
+    "password": "Mypassword"
+}
