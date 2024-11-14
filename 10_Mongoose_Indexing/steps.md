@@ -26,3 +26,6 @@ My response:
 
 Note: You can also delete the index to recheck if it's true by running this query.
 >> db.movies.dropIndex('Title_-1')
+
+
+>> ![Performance-Indexing](https://github.com/user-attachments/assets/e2b9cc4a-d5c6-4051-af38-84fb19375247)
