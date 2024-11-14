@@ -1,0 +1,33 @@
+{
+  "name": "10_mongoose_indexing",
+  "version": "1.0.0",
+  "description": "Check on the performance improvement after and before adding indexes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "Express",
+    "Javascript",
+    "NodeJS",
+    "Mongoose",
+    "MongoDB",
+    "Index",
+    "Performance",
+    "Improvement"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/ExpressJS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/ExpressJS-Tutorial#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1"
+  }
+}
