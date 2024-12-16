@@ -1,0 +1,30 @@
+{
+  "name": "redis_caching",
+  "version": "1.0.0",
+  "description": "Caching in Redis",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/ExpressJS-Tutorial.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Javascript",
+    "Redis"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/JS-Advanced/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/JS-Advanced#readme",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "redis": "^4.7.0"
+  }
+}
